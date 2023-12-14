@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Your Hotel Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg');
+            /* Replace with your actual image URL */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        header {
+            position: relative;
+            background: rgb(21, 32, 43, 0.7);
+            /* Darker semi-transparent background */
+            color: rgb(255, 255, 255);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.9);
+            /* Slightly more opaque */
+            margin: 15px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Additional styling for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #00eaff;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        /* Additional styling for links */
+        a {
+            color: #e3ff0f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Additional styling for lists */
+        ul {
+            padding-left: 20px;
+        }
+
+        /* Styling for the grid layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 0cm;
+            color: aliceblue;
+        }
+
+        .grid-item {
+
+            background-color: rgba(21, 32, 43, 0.9);
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
+            height: 150px;
+            width: 150px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 10px 200px rgba(125, 9, 233, 0.179);
+        }
+
+        .signupBtn {
+
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 100px;
+            padding: 10px;
+            color: white;
+        }
+
+        .logo {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            height: 80px;
+            width: 80px;
+            background-color: rgba(0, 0, 0, 0.7);
+
+        }
+
+        .hover-grow {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to hyatt</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.com" target="_blank">Home</a></li>
+                <li><a href="https://www.com" target="_blank">Rooms</a></li>
+                <li><a href="https://www.com" target="_blank">About us</a></li>
+                <li><a href="https://www.com" target="_blank">Contact</a></li>
+            </ul>
+            <a class="signupBtn" href="https://www.com" target="_blank">Sign Up</a>
+            <img class="logo"
+                src="data:image/jpeg;base64,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">
+        </nav>
+
+    </header>
+    <br> <br> <br> <br>
+
+    <!-- Header content remains the same -->
+
+    <!-- Modified section content with grid layout -->
+    <div class="grid-container">
+        <div class="grid-item hover-grow">
+            <h2>Room Categories</h2>
+            <p>
+                Explore our diverse range of room categories designed to suit your
+                preferences.
+            </p>
+        </div>
+
+        <div class="grid-item hover-grow">
+            <h2>Featured Amenities</h2>
+            <p>
+                Enjoy a full list of top-notch amenities included in all our room
+                categories.
+            </p>
+        </div>
+
+        <div class="grid-item hover-grow">
+            <h2>Special Offers</h2>
+            <p>
+                Don't miss out on our exclusive special offers. Stay with us and enjoy great deals!</p>
+            </p>
+        </div>
+
+        <div class="grid-item hover-grow">
+            <h2>Booking</h2>
+            <p>
+                Book now and get exciting discounts & rewards to enjoy your time!
+            </p>
+        </div>
+    </div>
+    <footer>
+        <!-- Footer content remains the same -->
+    </footer>
+
+
+
+    <!-- Other sections remain the same -->
+
+    <footer>
+        <p>© 2023 Your Hotel Name. All rights reserved.</p>
+    </footer>
+</body>
+
+</html> 
