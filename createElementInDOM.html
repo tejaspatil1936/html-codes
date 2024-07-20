@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create element in DOM</title>
+</head>
+
+<body style="background-color: #212121;color: antiquewhite;">
+
+</body>
+<script>
+    const divElement = document.createElement('div');
+    console.log(divElement);
+    divElement.className = "main";
+    divElement.id = Math.round(Math.random() * 10 + 1)
+    divElement.setAttribute("title", "generated title"); // better approach
+    divElement.style.color = "aqua"
+    divElement.style.fontSize = '20px'
+    // divElement.innerText = "Hello World"
+    const text = document.createTextNode("Hello World")
+    divElement.appendChild(text)
+    document.body.appendChild(divElement)
+
+</script>
+
+</html>
